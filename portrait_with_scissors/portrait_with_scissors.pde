@@ -11,7 +11,7 @@ PImage bg;
 // variables for rotations
 int deg1 = -10;
 int dir1 = 1;
-int deg2 = 10;
+int deg2 = 20;
 int dir2 = -1;
 
 // variables for color tint
@@ -48,7 +48,7 @@ void draw() {
     
     // rotation of first scissor half
     deg1 = deg1 + dir1; // add 1 to deg
-    if ( deg1 < -40 || deg1 > -10 ) {
+    if ( deg1 < -30 || deg1 > -10 ) {
       dir1 = -1 * dir1;
     }
     
@@ -60,7 +60,7 @@ void draw() {
     
     // tint of portrait photo
     tintColour = tintColour +tintDir;
-    if ( tintColour < 0 || tintColour > 255) {
+    if ( tintColour < 0 || tintColour > 200) {
       tintDir = -1 * tintDir;
     }
     
@@ -88,6 +88,11 @@ void draw() {
   popMatrix();
 
 
+<<<<<<< HEAD
+  if ( frameCount %60 == 0 ) {
+    gifExport.setDelay( 2 );
+    gifExport.addFrame();
+=======
   if ( frameCount % 10 == 0 ) {
     
     gifExport.setDelay( 1 ); //Sets the delay (the "framerate") for the most recently added frame. 
@@ -97,6 +102,7 @@ void draw() {
     
     gifExport.addFrame(); // add the frame to the gif
     
+>>>>>>> 283ce41574d5c8d4f1ac7e53d85ca4bcf770a231
   }
   
   
