@@ -88,21 +88,15 @@ void draw() {
   popMatrix();
 
 
-<<<<<<< HEAD
-  if ( frameCount %60 == 0 ) {
-    gifExport.setDelay( 2 );
-    gifExport.addFrame();
-=======
-  if ( frameCount % 10 == 0 ) {
+  if ( frameCount % 60 == 0 ) {
     
-    gifExport.setDelay( 1 ); //Sets the delay (the "framerate") for the most recently added frame. 
+    gifExport.setDelay( 2 ); //Sets the delay (the "framerate") for the most recently added frame. 
     //This is measured in Milliseconds and can be different for every frame. 
     //This effects the playback speed of the resulting GIF-file only. 
     //The speed / framerate with which you wrote the frames has no effect on playback speed.
     
     gifExport.addFrame(); // add the frame to the gif
     
->>>>>>> 283ce41574d5c8d4f1ac7e53d85ca4bcf770a231
   }
   
   
